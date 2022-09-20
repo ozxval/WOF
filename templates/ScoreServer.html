@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>World Of Game</title>
+</head>
+<body>
+      {% if data != -99 %}
+         <h1>The score is <div id="score">{{ data }}</div></h1>
+      {% else %}
+         <h1><div id="score" style="color:red">There is a problem to get your score</div></h1>
+      {% endif %}
+</body>
+</html>
