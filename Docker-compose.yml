@@ -1,0 +1,6 @@
+version: '3'
+services:
+    World-of-games:
+       build: '.'
+       ports:
+         - "8008:8008"
