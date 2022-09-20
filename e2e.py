@@ -5,9 +5,11 @@ from selenium.webdriver.chrome.webdriver import ChromiumDriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import MainScores
+import sys
 
 
 def test_scores_service():
+    MainScores.score_server()
     url = 'http://127.0.0.1:5001/'
     my_driver = webdriver.chrome(executable_path=r"D:\chromedriver_win32\chromedriver.exe")
     my_driver.get(url)
@@ -23,11 +25,9 @@ def test_scores_service():
 def main_function():
     test_scores_service()
     if test_scores_service():
-        print("0")
-        return 0
+        return sys.exit(0)
     else:
-        print("1")
-        return 1
+        return sys.exit(-1)
 
 
 
