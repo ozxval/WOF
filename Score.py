@@ -3,6 +3,7 @@ import webbrowser
 import os
 import requests
 
+
 def add_score(difficulty):
     score_file = open(Utils.SCORES_FILE_NAME, "r")
     file_data = score_file.read()

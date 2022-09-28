@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import Utils
+from time import sleep
 import webbrowser
+from threading import Thread
 
 app = Flask(__name__)
 
@@ -23,10 +25,12 @@ def get_score():
 
 
 def score_server():
-    webbrowser.open("http://127.0.0.1:5001")
+    webbrowser.open(Utils.server_address)
     app.run(host="0.0.0.0", port=5001, debug=False)
 
 
+def ran():
+    app.run(host="0.0.0.0", port=5001, debug=False)
 
 
-
+score_server()

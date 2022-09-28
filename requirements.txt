@@ -1,4 +1,5 @@
 flask
 requests
 selenium
-Jinja2	
+Jinja2
+webdriver-manager
